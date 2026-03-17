@@ -14,92 +14,64 @@ text-align:center;
 }
 
 .hero{
-padding:80px 20px;
+padding:60px 20px;
 background:#f4ede6;
 }
 
 .hero img{
-width:260px;
+width:220px;
 border-radius:20px;
+margin-bottom:20px;
 }
 
-.hero h1{
-font-size:42px;
+h1{
+margin:10px 0;
 }
 
 .subtitle{
-opacity:0.7;
+color:#666;
+margin-bottom:10px;
+}
+
+.limit{
+color:#c48b5a;
+font-weight:bold;
+margin-bottom:20px;
 }
 
 .btn{
 display:inline-block;
-margin:15px;
-padding:14px 30px;
-background:#d19a66;
+padding:12px 24px;
+background:#c48b5a;
 color:white;
-border-radius:30px;
+border-radius:20px;
 text-decoration:none;
 }
 
 .section{
-padding:60px 20px;
+padding:50px 20px;
 }
 
 .gallery{
-display:flex;
-overflow-x:auto;
-gap:12px;
-padding:20px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 }
 
 .gallery img{
-height:180px;
+width:100%;
 border-radius:12px;
-cursor:pointer;
-}
-
-.menu-img{
-width:90%;
-max-width:400px;
-border-radius:12px;
-margin:20px auto;
-cursor:pointer;
 }
 
 .price{
-line-height:2;
-font-size:18px;
+line-height:1.8;
 }
 
 .note{
-font-size:14px;
-opacity:0.7;
-}
-
-.limit{
-color:#c0392b;
-font-weight:bold;
-}
-
-/* 放大圖 */
-.modal{
-display:none;
-position:fixed;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-}
-
-.modal img{
-max-width:90%;
-max-height:90%;
-margin-top:5%;
-border-radius:12px;
+color:#888;
+margin-top:10px;
 }
 </style>
-
 </head>
 
 <body>
@@ -108,32 +80,24 @@ border-radius:12px;
 <img src="hero.jpg.jpg">
 <h1>嶼慢時刻</h1>
 <p class="subtitle">慢慢品味島嶼的甜</p>
-<p class="limit">⚠ 雪Q餅常態販售｜甜時粽端午限定</p>
+<p class="limit">△ 雪Q餅常態販售｜甜時粽限時推出</p>
 
-<a class="btn" href="https://ig.me/m/yuman.moments">
-立即IG私訊訂購
-</a>
+<a class="btn" href="https://ig.me/m/">立即IG私訊訂購</a>
 
-<p class="note">
-手工製作 · 每週限量
-</p>
+<p class="note">手工製作・每週限量</p>
 </div>
 
 <div class="section">
 <h2>人氣甜點</h2>
 
 <div class="gallery">
-<img src="p1.jpg.PNG" onclick="openImg(this)">
-<img src="p2.jpg.PNG" onclick="openImg(this)">
-<img src="p3.jpg.PNG" onclick="openImg(this)">
+<img src="p1.jpg.PNG">
+<img src="p2.jpg.PNG">
+<img src="p3.jpg.PNG">
 
-<img src="qixi.jpg" onclick="openImg(this)">
-<img src="menu.jpg" onclick="openImg(this)">
+<img src="qixi.jpg.PNG">
+<img src="menu.jpg.PNG">
 
-<img src="zong1.jpg" onclick="openImg(this)">
-<img src="zong2.jpg" onclick="openImg(this)">
-<img src="zong3.jpg" onclick="openImg(this)">
-<img src="zong4.jpg" onclick="openImg(this)">
 </div>
 </div>
 
@@ -141,81 +105,55 @@ border-radius:12px;
 <h2>端午限定｜嶼慢甜時粽</h2>
 
 <div class="gallery">
-<img src="zong1.jpg" onclick="openImg(this)">
-<img src="zong2.jpg" onclick="openImg(this)">
-<img src="zong3.jpg" onclick="openImg(this)">
-<img src="zong4.jpg" onclick="openImg(this)">
+<img src="qixi.jpg.PNG">
 </div>
 
-<p class="note">
-限量預購中 · 早鳥優惠中
-</p>
+<p class="price">
+單顆 $80<br>
+夜嶼金沙 $100<br><br>
 
-<a class="btn" href="https://ig.me/m/yuman.moments">
-立即預訂甜粽
-</a>
+2入禮盒 $168<br>
+4入禮盒 $328<br>
+6入禮盒 $468
+</p>
 </div>
 
 <div class="section">
-<h2>商品價格</h2>
+<h2>雪Q餅價格</h2>
 
 <p class="price">
-<b>🍡 雪Q餅系列</b><br><br>
-
-🥡 袋裝<br>
 嶼見甜 9顆 $180<br>
-嶼見慢 12顆 $280<br><br>
-
-🎁 禮盒<br>
+嶼見慢 12顆 $280<br>
 嶼見心動 16顆 $480<br>
 嶼見時光 20顆 $620
 </p>
-
-<br><br>
-
-<p class="price">
-<b>🌿 嶼慢甜時粽（端午限定）</b><br><br>
-
-單顆<br>
-一般口味 $80<br>
-夜嶼金沙（杜拜開心果） $100<br><br>
-
-🎁 禮盒<br>
-2入 $168<br>
-4入 $328<br>
-6入 $468<br><br>
-
-🔥 早鳥優惠<br>
-2入 $150<br>
-4入 $298<br>
-6入 $420
-</p>
-
-<p class="note">
-端午限定 · 數量有限
-</p>
 </div>
 
 <div class="section">
-<a class="btn" href="https://ig.me/m/yuman.moments">
-立即私訊訂購
-</a>
+<h2>系列介紹</h2>
+
+<div class="gallery">
+<img src="s1.jpg.PNG">
+<img src="s2.jpg.PNG">
+<img src="s3.jpg.PNG">
+</div>
 </div>
 
-<div id="imgModal" class="modal" onclick="closeImg()">
-<img id="modalImg">
+<div class="section">
+<h2>訂購方式</h2>
+
+<p class="price">
+📩 IG私訊訂購<br>
+📦 7-11 / 面交<br>
+📅 每週接單<br>
+⏰ 手工製作
+</p>
+
+<br>
+
+<a class="btn" href="https://instagram.com/">前往 Instagram</a>
+
 </div>
-
-<script>
-function openImg(img){
-document.getElementById("imgModal").style.display="block";
-document.getElementById("modalImg").src=img.src;
-}
-
-function closeImg(){
-document.getElementById("imgModal").style.display="none";
-}
-</script>
 
 </body>
 </html>
