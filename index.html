@@ -21,22 +21,19 @@ background:#f4ede6;
 .hero img{
 width:260px;
 border-radius:20px;
-margin-bottom:20px;
 }
 
 .hero h1{
 font-size:42px;
-margin:10px 0;
 }
 
 .subtitle{
 opacity:0.7;
-margin-top:10px;
 }
 
 .btn{
 display:inline-block;
-margin-top:25px;
+margin:15px;
 padding:14px 30px;
 background:#d19a66;
 color:white;
@@ -45,19 +42,20 @@ text-decoration:none;
 }
 
 .section{
-padding:70px 20px;
+padding:60px 20px;
 }
 
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+display:flex;
+overflow-x:auto;
 gap:12px;
-padding:0 20px;
+padding:20px;
 }
 
 .gallery img{
-width:100%;
+height:180px;
 border-radius:12px;
+cursor:pointer;
 }
 
 .menu-img{
@@ -65,7 +63,7 @@ width:90%;
 max-width:400px;
 border-radius:12px;
 margin:20px auto;
-display:block;
+cursor:pointer;
 }
 
 .price{
@@ -76,7 +74,29 @@ font-size:18px;
 .note{
 font-size:14px;
 opacity:0.7;
-margin-top:10px;
+}
+
+.limit{
+color:#c0392b;
+font-weight:bold;
+}
+
+/* 放大圖 */
+.modal{
+display:none;
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+}
+
+.modal img{
+max-width:90%;
+max-height:90%;
+margin-top:5%;
+border-radius:12px;
 }
 </style>
 
@@ -89,59 +109,42 @@ margin-top:10px;
 <h1>嶼慢時刻</h1>
 <p class="subtitle">慢慢品味島嶼的甜</p>
 
+<p class="limit">⚠ 本週限量製作，售完為止</p>
+
 <a class="btn" href="https://ig.me/m/yuman.moments">
-立即預訂今日甜點
+立即IG私訊訂購
 </a>
 
-<p class="note">手工製作 · 限量接單</p>
+<p class="note">
+點擊後可直接傳訊：<br>
+「我要訂購＋商品＋數量＋取貨方式」
+</p>
+
 </div>
 
 <div class="section">
 <h2>人氣甜點</h2>
 
 <div class="gallery">
-<img src="p1.jpg.PNG">
-<img src="p2.jpg.PNG">
-<img src="p3.jpg.PNG">
+<img src="p1.jpg.PNG" onclick="openImg(this)">
+<img src="p2.jpg.PNG" onclick="openImg(this)">
+<img src="p3.jpg.PNG" onclick="openImg(this)">
 </div>
 </div>
 
 <div class="section">
 <h2>雪Q餅系列</h2>
-
-<img src="s1.jpg.PNG" class="menu-img">
-
-<p class="price">
-莓光慢嶼（草莓 × 開心果）<br>
-微酸日常（蔓越莓）<br>
-南島晴日（鳳梨 × 椰子）<br>
-夜色微橙（可可 × 橙皮）
-</p>
+<img src="s1.jpg.PNG" class="menu-img" onclick="openImg(this)">
 </div>
 
 <div class="section">
 <h2>茶點系列</h2>
-
-<img src="s2.jpg.PNG" class="menu-img">
-
-<p class="price">
-山影午後（抹茶 × 杏仁）<br>
-午後伯爵（伯爵 × 檸檬）<br>
-暖焙山嶼（焙茶 × 杏仁）<br>
-島晨咖啡（咖啡 × 核桃）
-</p>
+<img src="s2.jpg.PNG" class="menu-img" onclick="openImg(this)">
 </div>
 
 <div class="section">
 <h2>海岸風味</h2>
-
-<img src="s3.jpg.PNG" class="menu-img">
-
-<p class="price">
-海霧檸香（起司 × 檸檬 × 黑胡椒）<br>
-暮島煙火（起司 × 培根 × 煙燻紅椒）<br>
-島嶼微光（鳳梨 × 微辣 × 起司）
-</p>
+<img src="s3.jpg.PNG" class="menu-img" onclick="openImg(this)">
 </div>
 
 <div class="section">
@@ -162,11 +165,22 @@ margin-top:10px;
 <a class="btn" href="https://ig.me/m/yuman.moments">
 立即私訊訂購
 </a>
-
-<p class="note">
-私訊請提供：商品＋數量＋取貨方式
-</p>
 </div>
+
+<div id="imgModal" class="modal" onclick="closeImg()">
+<img id="modalImg">
+</div>
+
+<script>
+function openImg(img){
+document.getElementById("imgModal").style.display="block";
+document.getElementById("modalImg").src=img.src;
+}
+
+function closeImg(){
+document.getElementById("imgModal").style.display="none";
+}
+</script>
 
 </body>
 </html>
