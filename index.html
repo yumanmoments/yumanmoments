@@ -13,7 +13,6 @@ body{
     text-align:center;
 }
 
-/* LOGO */
 .hero{
     padding:90px 20px 70px;
     background:linear-gradient(#f6efe9,#f8f5f2);
@@ -25,9 +24,7 @@ body{
     box-shadow:0 15px 40px rgba(0,0,0,0.2);
 }
 
-h1{
-    font-size:40px;
-}
+h1{font-size:40px;}
 
 .subtitle{
     font-size:22px;
@@ -35,7 +32,6 @@ h1{
     color:#666;
 }
 
-/* 放大區 */
 .highlight{
     font-size:26px;
     color:#c85c3a;
@@ -55,7 +51,6 @@ h1{
     line-height:2;
 }
 
-/* 按鈕 */
 .btn{
     display:inline-block;
     background:linear-gradient(135deg,#c69c6d,#a97c50);
@@ -64,13 +59,11 @@ h1{
     border-radius:40px;
     text-decoration:none;
     margin-top:20px;
-
     font-size:22px;
     font-weight:bold;
     box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* 區塊 */
 .section{
     padding:80px 20px;
 }
@@ -79,7 +72,6 @@ h1{
     font-size:34px;
 }
 
-/* 圖片 */
 .gallery{
     display:flex;
     gap:16px;
@@ -93,7 +85,6 @@ h1{
     cursor:pointer;
 }
 
-/* 卡片（重點放大） */
 .card{
     background:#fff;
     margin:30px auto;
@@ -101,32 +92,29 @@ h1{
     border-radius:25px;
     max-width:520px;
     box-shadow:0 15px 30px rgba(0,0,0,0.08);
-
     font-size:30px;
     line-height:2.6;
     font-weight:600;
 }
 
-/* 圖片放大 */
 #modal{
     display:none;
     position:fixed;
     z-index:999;
-    padding-top:60px;
-    left:0;
     top:0;
+    left:0;
     width:100%;
     height:100%;
     background:rgba(0,0,0,0.8);
 }
 
 #modal img{
-    margin:auto;
     display:block;
+    margin:auto;
     max-width:90%;
+    margin-top:60px;
 }
 
-/* 彈出優惠 */
 #popup{
 display:none;
 position:fixed;
@@ -147,23 +135,23 @@ z-index:999;
 <body>
 
 <div class="hero">
-    <img src="hero.jpg.jpg">
-    <h1>嶼慢時刻</h1>
+<img src="hero.jpg.jpg">
+<h1>嶼慢時刻</h1>
 
-    <p class="subtitle">
-    海風與城市交會的地方<br>
-    讓味道，也有風景<br>
-    在慢慢流動的島嶼時光裡<br>
-    每一口，都是剛剛好的溫柔
-    </p>
+<p class="subtitle">
+海風與城市交會的地方<br>
+讓味道，也有風景<br>
+在慢慢流動的島嶼時光裡<br>
+每一口，都是剛剛好的溫柔
+</p>
 
-    <div class="highlight">🔥 端午限定甜時粽｜早鳥優惠中</div>
+<div class="highlight">🔥 端午限定甜時粽｜早鳥優惠中</div>
 
-    <a class="btn" href="https://ig.me/m/yuman.moments?text=我要訂購甜時粽（請提供口味與數量）">
-    🔥 立即私訊預訂
-    </a>
+<a class="btn" href="https://ig.me/m/yuman.moments?text=我要訂購甜時粽%0A口味：%0A數量：%0A取貨方式（7-11/面交）：%0A取貨日期：">
+🔥 立即私訊預訂
+</a>
 
-    <p class="note">手工製作・每週限量</p>
+<p class="note">手工製作・每週限量</p>
 </div>
 
 <!-- 甜時粽 -->
@@ -185,7 +173,7 @@ z-index:999;
 4入 $328｜早鳥 $298<br>
 6入 $468｜早鳥 $420<br>
 
-<a class="btn" href="https://ig.me/m/yuman.moments?text=我要訂購甜時粽（請提供口味與數量）">
+<a class="btn" href="https://ig.me/m/yuman.moments?text=我要訂購甜時粽%0A口味：%0A數量：%0A取貨方式（7-11/面交）：%0A取貨日期：">
 🔥 立即下單（限量製作）
 </a>
 
@@ -201,11 +189,9 @@ z-index:999;
 <img src="p1.jpg.PNG" onclick="openImg(this)">
 <img src="p2.jpg.PNG" onclick="openImg(this)">
 <img src="p3.jpg.PNG" onclick="openImg(this)">
-
 <img src="s1.jpg.PNG" onclick="openImg(this)">
 <img src="s2.jpg.PNG" onclick="openImg(this)">
 <img src="s3.jpg.PNG" onclick="openImg(this)">
-
 <img src="qixi.jpg .PNG" onclick="openImg(this)">
 </div>
 
@@ -215,7 +201,7 @@ z-index:999;
 16顆 $480<br>
 20顆 $620<br>
 
-<a class="btn" href="https://ig.me/m/yuman.moments?text=我要訂購雪Q餅（請提供口味與數量）">
+<a class="btn" href="https://ig.me/m/yuman.moments?text=我要訂購雪Q餅%0A口味：%0A數量：%0A取貨方式（7-11/面交）：%0A取貨日期：">
 🔥 現在下單（熱賣中）
 </a>
 
@@ -230,7 +216,6 @@ z-index:999;
 
 </div>
 
-<!-- 圖片放大 -->
 <div id="modal" onclick="this.style.display='none'">
 <img id="modalImg">
 </div>
@@ -241,7 +226,6 @@ document.getElementById("modal").style.display="block";
 document.getElementById("modalImg").src = img.src;
 }
 
-/* 彈出優惠 */
 setTimeout(function(){
 document.getElementById("popup").style.display="block";
 },3000);
@@ -250,7 +234,7 @@ document.getElementById("popup").style.display="block";
 <div id="popup">
 <p style="font-size:20px;font-weight:bold;">🔥 限量製作中</p>
 <p style="font-size:16px;">現在私訊可優先保留✨</p>
-<a href="https://ig.me/m/yuman.moments?text=我要預訂（請幫我保留名額）"
+<a href="https://ig.me/m/yuman.moments?text=我要預訂%0A商品：%0A數量：%0A取貨方式："
 style="display:inline-block;margin-top:10px;background:#c49363;color:#fff;padding:10px 20px;border-radius:20px;text-decoration:none;">
 立即私訊
 </a>
