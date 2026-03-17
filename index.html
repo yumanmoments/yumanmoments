@@ -3,123 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <title>嶼慢時刻 | Yuman Moments</title>
+
 <style>
 body{
 font-family:"Noto Sans TC",sans-serif;
 margin:0;
 background:#fffaf7;
-text-align:center;
 color:#333;
+text-align:center;
 }
 
 .hero{
-padding:60px 20px;
+padding:80px 20px;
 background:#f4ede6;
 }
 
 .hero img{
 width:260px;
 border-radius:20px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:42px;
+margin:10px 0;
+}
+
+.subtitle{
+opacity:0.7;
+margin-top:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 30px;
+background:#d19a66;
+color:white;
+border-radius:30px;
+text-decoration:none;
+font-size:16px;
+}
+
+.section{
+padding:70px 20px;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:10px;
-padding:20px;
+gap:12px;
+padding:0 20px;
 }
 
 .gallery img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
+transition:0.3s;
 }
 
-.section{
-padding:50px 20px;
+.gallery img:hover{
+transform:scale(1.05);
 }
 
-.order{
-background:#f4ede6;
-padding:30px;
-margin:20px;
-border-radius:20px;
+.price{
+line-height:2;
+font-size:18px;
 }
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#d19a66;
-color:white;
-border-radius:30px;
-text-decoration:none;
+.note{
+font-size:14px;
+opacity:0.7;
+margin-top:10px;
 }
 </style>
+
 </head>
+
 <body>
+
 <div class="hero">
 <img src="hero.jpg.jpg">
+
 <h1>嶼慢時刻</h1>
-<p>Yuman Moments</p>
-<p>海風與城市交會的地方<br>讓味道，也有風景</p>
-  <p style="opacity:0.7;">手工製作 · 限量接單 · 每週出貨</p>
+
+<p class="subtitle">
+慢慢品味島嶼的甜
+</p>
+
 <a class="btn" href="https://ig.me/m/yuman.moments">
-立即私訊訂購
+立即預訂今日甜點
 </a>
 
-<p style="font-size:14px; opacity:0.7;">
-私訊格式：商品＋數量＋取貨方式
+<p class="note">
+手工製作 · 限量接單
 </p>
+
 </div>
+
 <div class="section">
-<h2>人氣甜點</h2>
+<h2>今日推薦</h2>
+
 <div class="gallery">
 <img src="p1.jpg.PNG">
 <img src="p2.jpg.PNG">
 <img src="p3.jpg.PNG">
 </div>
-</div>
-<div class="section">
-<h2>系列介紹</h2>
-<div class="gallery">
-<img src="s1.jpg.PNG">
-<img src="s2.jpg.PNG">
-<img src="s3.jpg.PNG">
-</div>
-</div>
-<div class="section">
-<h2>精選禮盒</h2>
 
-<p><b>🥡 袋裝</b><br><br>
+</div>
+
+<div class="section">
+<h2>商品價格</h2>
+
+<p class="price">
+
+<b>🥡 袋裝</b><br><br>
+
 嶼見甜 9顆 $180<br>
-嶼見慢 12顆 $280
-</p>
+嶼見慢 12顆 $280<br><br>
 
-<br>
+<b>🎁 禮盒</b><br><br>
 
-<p><b>🎁 禮盒</b><br><br>
 嶼見心動 16顆 $480<br>
-嶼見時光 20顆 $620<br>
+嶼見時光 20顆 $620
+
 </p>
 
 </div>
+
 <div class="section">
-<h2>訂購方式</h2>
-<div class="order">
-<p>
-📩 IG私訊訂購<br><br>
-📦 7-11 / 面交<br><br>
-📅 每週接單<br><br>
-⏰ 手工製作
-</p>
-</div>
+
 <a class="btn" href="https://ig.me/m/yuman.moments">
 立即私訊訂購
 </a>
 
-<p style="font-size:14px; opacity:0.7;">
-私訊格式：商品＋數量＋取貨方式
+<p class="note">
+私訊請提供：商品＋數量＋取貨方式
 </p>
+
 </div>
+
 </body>
 </html>
