@@ -35,11 +35,24 @@ h1{
     color:#666;
 }
 
+/* 放大區 */
 .highlight{
-    font-size:20px;
+    font-size:26px;
     color:#c85c3a;
     margin:20px 0;
     font-weight:bold;
+}
+
+.note{
+    font-size:20px;
+    color:#999;
+    margin-top:12px;
+    line-height:1.8;
+}
+
+.series-text{
+    font-size:22px;
+    line-height:2;
 }
 
 /* 按鈕 */
@@ -57,19 +70,13 @@ h1{
     box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-.note{
-    font-size:18px;
-    color:#999;
-    margin-top:12px;
-}
-
 /* 區塊 */
 .section{
     padding:80px 20px;
 }
 
 .section h2{
-    font-size:32px;
+    font-size:34px;
 }
 
 /* 圖片 */
@@ -95,9 +102,9 @@ h1{
     max-width:520px;
     box-shadow:0 15px 30px rgba(0,0,0,0.08);
 
-    font-size:26px;
-    line-height:2.4;
-    font-weight:500;
+    font-size:30px;
+    line-height:2.6;
+    font-weight:600;
 }
 
 /* 圖片放大 */
@@ -117,6 +124,21 @@ h1{
     margin:auto;
     display:block;
     max-width:90%;
+}
+
+/* 彈出優惠 */
+#popup{
+display:none;
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#fff;
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+max-width:300px;
+z-index:999;
 }
 </style>
 
@@ -156,8 +178,8 @@ h1{
 </div>
 
 <div class="card">
-單顆 $80<br>
-夜嶼金沙 $100<br><br>
+<span style="font-size:34px;">單顆 $80</span><br>
+<span style="font-size:34px;">夜嶼金沙 $100</span><br><br>
 
 2入 $168｜早鳥 $150<br>
 4入 $328｜早鳥 $298<br>
@@ -188,8 +210,8 @@ h1{
 </div>
 
 <div class="card">
-9顆 $180<br>
-12顆 $280<br>
+<span style="font-size:34px;">9顆 $180</span><br>
+<span style="font-size:34px;">12顆 $280</span><br>
 16顆 $480<br>
 20顆 $620<br>
 
@@ -199,7 +221,7 @@ h1{
 
 <p class="note">私訊請提供：商品＋數量＋取貨方式</p>
 
-<p class="note">
+<p class="series-text">
 【嶼慢果實系列】草莓・鳳梨・蔓越莓<br><br>
 【嶼慢茶點系列】抹茶・伯爵・咖啡<br><br>
 【海岸風味系列】檸檬・黑胡椒・起司
@@ -210,15 +232,29 @@ h1{
 
 <!-- 圖片放大 -->
 <div id="modal" onclick="this.style.display='none'">
-    <img id="modalImg">
+<img id="modalImg">
 </div>
 
 <script>
 function openImg(img){
-    document.getElementById("modal").style.display="block";
-    document.getElementById("modalImg").src = img.src;
+document.getElementById("modal").style.display="block";
+document.getElementById("modalImg").src = img.src;
 }
+
+/* 彈出優惠 */
+setTimeout(function(){
+document.getElementById("popup").style.display="block";
+},3000);
 </script>
+
+<div id="popup">
+<p style="font-size:20px;font-weight:bold;">🔥 限量製作中</p>
+<p style="font-size:16px;">現在私訊可優先保留✨</p>
+<a href="https://ig.me/m/yuman.moments?text=我要預訂（請幫我保留名額）"
+style="display:inline-block;margin-top:10px;background:#c49363;color:#fff;padding:10px 20px;border-radius:20px;text-decoration:none;">
+立即私訊
+</a>
+</div>
 
 </body>
 </html>
